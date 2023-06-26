@@ -1,0 +1,165 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "didikala": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/didikala",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css",
+              "src/assets/css/vendor/font-awesome.min.css",
+              "src/assets/css/vendor/materialdesignicons.min.css",
+              "src/assets/css/vendor/bootstrap.min.css",
+              "src/assets/css/vendor/bootstrap-slider.min.css",
+              "src/assets/css/vendor/owl.carousel.min.css",
+              "src/assets/css/vendor/jquery.horizontalmenu.css",
+              "src/assets/css/vendor/fancybox.min.css",
+              "src/assets/css/vendor/nice-select.css",
+              "src/assets/css/vendor/nouislider.min.css",
+              "src/assets/css/main.css",
+              "src/assets/css/colors/default.css",
+              "./node_modules/ngx-toastr/toastr.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css"
+            ],
+            "scripts": [
+              "src/assets/js/vendor/jquery-3.4.1.min.js",
+              "src/assets/js/vendor/popper.min.js",
+              "src/assets/js/vendor/bootstrap.min.js",
+              "src/assets/js/vendor/bootstrap-slider.min.js",
+              "src/assets/js/vendor/owl.carousel.min.js",
+              "src/assets/js/vendor/owl.carousel2.thumbs.min.js",
+              "src/assets/js/vendor/jquery.nicescroll.min.js",
+              "src/assets/js/vendor/jquery.nice-select.min.js",
+              "src/assets/js/vendor/nouislider.min.js",
+              "src/assets/js/vendor/jquery.horizontalmenu.js",
+              "src/assets/js/vendor/jquery.fancybox.min.js",
+              "src/assets/js/vendor/countdown.min.js",
+              "src/assets/js/vendor/wNumb.js",
+              "src/assets/js/vendor/ResizeSensor.min.js",
+              "src/assets/js/vendor/theia-sticky-sidebar.min.js",
+              "src/assets/js/main.js",
+              "node_modules/@fortawesome/fontawesome-free/js/all.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "5mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "5mb",
+                  "maximumError": "5mb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "didikala:build:production"
+            },
+            "development": {
+              "browserTarget": "didikala:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "didikala:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css",
+              "src/assets/css/vendor/font-awesome.min.css",
+              "src/assets/css/vendor/materialdesignicons.min.css",
+              "src/assets/css/vendor/bootstrap.min.css",
+              "src/assets/css/vendor/bootstrap-slider.min.css",
+              "src/assets/css/vendor/owl.carousel.min.css",
+              "src/assets/css/vendor/jquery.horizontalmenu.css",
+              "src/assets/css/vendor/fancybox.min.css",
+              "src/assets/css/vendor/nice-select.css",
+              "src/assets/css/vendor/nouislider.min.css",
+              "src/assets/css/main.css",
+              "src/assets/css/colors/default.css",
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css"
+            ],
+            "scripts": [
+              "src/assets/js/vendor/jquery-3.4.1.min.js",
+              "src/assets/js/vendor/popper.min.js",
+              "src/assets/js/vendor/bootstrap.min.js",
+              "src/assets/js/vendor/bootstrap-slider.min.js",
+              "src/assets/js/vendor/owl.carousel.min.js",
+              "src/assets/js/vendor/owl.carousel2.thumbs.min.js",
+              "src/assets/js/vendor/jquery.nicescroll.min.js",
+              "src/assets/js/vendor/jquery.nice-select.min.js",
+              "src/assets/js/vendor/nouislider.min.js",
+              "src/assets/js/vendor/jquery.horizontalmenu.js",
+              "src/assets/js/vendor/jquery.fancybox.min.js",
+              "src/assets/js/vendor/countdown.min.js",
+              "src/assets/js/vendor/wNumb.js",
+              "src/assets/js/vendor/ResizeSensor.min.js",
+              "src/assets/js/vendor/theia-sticky-sidebar.min.js",
+              "src/assets/js/main.js",
+              "node_modules/@fortawesome/fontawesome-free/js/all.js"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "14132043-eb04-49cd-9b93-a9e9af588198"
+  }
+}

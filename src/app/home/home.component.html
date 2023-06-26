@@ -1,0 +1,90 @@
+  <div class="wrapper mt-3">
+    <!-- Start header -->
+   <app-header></app-header>
+    <!-- End header -->
+    <!-- Start main-content -->
+    <main class="main-content ">
+        <div class=" " >
+            <!-- Start Main-Slider -->
+            <div  style="width: 100%;">
+                   
+          
+
+
+                    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="./assets/img/main-slider/1.jpg" class="d-block w-100" alt="...">
+                           
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./assets/img/main-slider/2.jpg" class="d-block w-100" alt="...">                            <div class="carousel-caption d-none ">
+                            
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./assets/img/main-slider/3.jpg" class="d-block w-100" alt="...">                            <div class="carousel-caption d-none d-md-block">
+                            
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </button>
+                      </div>
+                </div>
+            </div>
+            <!-- End Main-Slider -->
+        <!-- Start Product-Slider -->
+       <app-product-slider-amazingoffer [setcolor1]="color1"></app-product-slider-amazingoffer>
+
+        <!-- End Product-Slider -->
+        <app-bestselling [listbestsellingdata]="listbestselling" [TextHeader]="titlebestselling"></app-bestselling>
+        <!-- Start Product-Slider -->
+         <!-- Start Banner -->
+
+
+<!-- End Banner -->
+<app-product-slider-amazingoffer [setcolor2]="color2" ></app-product-slider-amazingoffer>
+        <!-- End Product-Slider -->
+        <div class="container main-container">
+            <!-- Start Banner -->
+          
+            <!-- End Banner -->
+            <!-- Start Category-Section -->
+            
+            <!-- End Category-Section -->
+            <!-- Start Product-Slider -->
+            <!-- End Product-Slider -->
+            <!-- Start Banner -->
+          
+            <!-- End Banner -->
+            <!--اضافه کردن به محصولات لیست-->
+
+            <!-- Start Feature-Product -->
+          <app-featureproduct></app-featureproduct>
+            <!-- End Feature-Product -->
+            <!-- Start Brand-Slider -->
+          
+            <!-- End Brand-Slider -->
+        </div>
+    </main>
+    <!-- End main-content -->
+
+
+    
+    <!-- Start footer -->
+      <app-footer></app-footer>
+    <!-- End footer -->
+</div>
+

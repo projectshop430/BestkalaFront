@@ -1,0 +1,43 @@
+
+<section class="slider-section mb-5 amazing-section"    id="{{color1}}">
+  <div class="container main-container">
+      <div class="row mb-3">
+          <!-- Start Product-Slider -->
+          <div class="col-12">
+              <div class="product-carousel carousel-lg owl-carousel owl-theme">
+                  <div class="item">
+                      <div class="amazing-product text-center pt-5">
+                          <a href="#">
+                              <img src="{{picturepishned}}" alt="">
+                          </a>
+                          <a href="#" class="view-all-amazing-btn">
+                            {{viewall}}
+                          </a>
+                      </div>
+                  </div>
+                  <div class="item" *ngFor="let itemsss of productlist">
+                      <div class="product-card mb-3">
+                          <div class="product-head">
+                              <div class="rating-stars">
+                                  <i class="mdi mdi-star active"></i>
+                                  <i class="mdi mdi-star active"></i>
+                                  <i class="mdi mdi-star active"></i>
+                                  <i class="mdi mdi-star active"></i>
+                                  <i class="mdi mdi-star active"></i>
+                              </div>
+                          </div>
+                        <a class="product-thumb" [routerLink]="['/shopsingleproduct' , itemsss.id]">
+                         <app-product [productvale]="itemsss"></app-product>
+                        </a>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+          <!-- End Product-Slider -->
+
+      </div>
+  </div>
+</section>
+
+

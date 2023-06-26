@@ -1,0 +1,60 @@
+  <div class="wrapper">
+        <!-- Start main-content -->
+        <main class="main-content dt-sl mt-4 mb-3">
+            <div class="container main-container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-5 col-md-7 col-12 mx-auto">
+                        <div class="logo-area text-center mb-3">
+                            <app-headersign></app-headersign>
+                        </div>
+                        <div class="auth-wrapper form-ui border pt-4">
+                            <div class="section-title title-wide mb-1 no-after-title-wide">
+                                <h2 class="font-weight-bold">{{confirmationnumber}}</h2>
+                            </div>
+                            <div class="message-light">
+                                {{descriptionconfirimation1}}{{descriptionphonnumber}}{{descriptionconfirimation2}}
+                                <a href="#" class="btn-link-border">
+                                  {{editnumber}}
+                                </a>
+                            </div>
+                               <form [formGroup]="customerForm" (submit)="send()">
+                                <div class="form-row-title">
+                                    <h3>کد تایید را وارد کنید</h3>
+                                </div>
+                                <div class="form-row">
+                                    <div class="numbers-verify">
+                                        <div class="lines-number-input">
+                                            <input type="text" class="line-number" maxlength="1" formControlName="sh1" autofocus="">
+                                            <input type="text" class="line-number" maxlength="1" formControlName="sh2">
+                                            <input type="text" class="line-number" maxlength="1" formControlName="sh3">
+                                            <input type="text" class="line-number" maxlength="1" formControlName="sh4">
+                                            <input type="text" class="line-number" maxlength="1" formControlName="sh5">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-secondary">ورود</button>
+                                <div class="form-row mt-3">
+                                    <div class="d-flex align-items-center">
+                                        <span class="text-primary btn-link-border ml-1">دریافت مجدد کد تایید</span>
+                                        <span>(</span>
+                                        <p id="countdown-verify-end"></p>
+                                        <span>)</span>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="form-footer mt-3">
+                                <div>
+                                    <span class="font-weight-bold">کاربر جدید هستید؟</span>
+                                    <a routerLink="/FormRegister" routerLinkActive="active-menu" class="mr-3 mt-2">ثبت نام در دیدیکالا</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- End main-content -->
+        <!-- Start mini-footer -->
+        <app-footersign></app-footersign>
+        <!-- End mini-footer -->
+    </div>

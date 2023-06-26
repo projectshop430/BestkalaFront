@@ -1,0 +1,133 @@
+
+    <div class="wrapper shopping-page mt-5" >
+        <!-- Start header-shopping -->
+        <app-header></app-header>
+        <!-- End header-shopping -->
+        <!-- Start main-content -->
+        <main class="main-content dt-sl mt-4 mb-3">
+            <div class="container main-container">
+
+                <div class="row">
+                    <div class="cart-page-content col-12 px-0">
+                        <div class="checkout-alert dt-sn dt-sn--box mb-4">
+                            <div class="circle-box-icon successful">
+                                <i class="mdi mdi-check-bold"></i>
+                            </div>
+                            <div class="checkout-alert-title">
+                                <h4> {{title}} <span
+                                        class="checkout-alert-highlighted checkout-alert-highlighted-success">{{codepay}}</span>
+                                  {{discription}}
+                                </h4>
+                            </div>
+                            <div class="checkout-alert-content">
+                                <p class="checkout-alert-content-success">
+                                  {{complatedesctiption}}
+                                </p>
+                            </div>
+                        </div>
+                        <section class="checkout-details dt-sl dt-sn dt-sn--box mt-4 pt-4 pb-3 pr-3 pl-3 mb-5 px-res-1">
+                            <div class="checkout-details-title">
+                                <h4>
+                                  {{title}}کد
+                                    <span>
+                                        {{codepay}}
+                                    </span>
+                                </h4>
+                                <div class="row">
+                                    <div class="col-lg-9 col-md-8 col-sm-12">
+                                        <div class="checkout-details-title">
+                                            <p>
+                                                سفارش شما با موفقیت در سیستم ثبت شد و هم اکنون
+                                                <span class="text-highlight text-highlight-success">تکمیل شده</span>
+                                                است.
+                                                جزئیات این سفارش را می‌توانید با کلیک بر روی دکمه
+                                                <a href="#" class="border-bottom-dt">پیگیری سفارش</a>
+                                                مشاهده نمایید.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-12">
+                                        <a href="#"
+                                            class="btn-primary-cm bg-secondary btn-with-icon d-block text-center pr-0">
+                                            <i class="mdi mdi-shopping"></i>
+                                            پیگیری سفارش
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-12 px-res-0">
+                                        <div class="checkout-table">
+                                            <div class="row">
+                                                <div class="col-md-6 col-sm-12">
+                                                    <p>
+                                                        {{   deliverynametitle}}
+                                                        <span>
+                                                            {{  deliveryname}}
+                                                        </span></p>
+                                                </div>
+                                                <div class="col-md-6 col-sm-12">
+                                                    <p>
+                                                      {{phonenumbertitle}}
+                                                        <span>
+                                                          {{ phonenumber}}
+                                                        </span></p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6 col-sm-12">
+                                                    <p>
+                                                        {{ Numberproducttitle}}
+                                                        <span>
+                                                           {{ Numberproduc}}
+                                                        </span></p>
+                                                </div>
+                                                <div class="col-md-6 col-sm-12">
+                                                    <p>
+                                                        {{totalpricetitle}}
+                                                        <span>
+                                                           {{totalprice}} {{money}}
+                                                        </span></p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6 col-sm-12">
+                                                    <p >
+                                                       {{  Paymenttitle}}
+                                                        <span  class="green">
+                                                           {{Payment}}
+                                                            </span></p>
+                                                </div>
+                                                <div class="col-md-6 col-sm-12">
+                                                    <p>
+                                                      {{typepay}}
+                                                        <span>
+                                                           {{ paydisec}}
+                                                        </span></p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <p>{{ addresstitle}} {{address}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- Start Product-Slider -->
+                    <app-bestselling [listbestsellingdata]="offercartempty" [TextHeader]="titleoffercartempty"></app-bestselling>
+
+                    <!-- End Product-Slider -->
+                </div>
+
+            </div>
+        </main>
+        <!-- End main-content -->
+        <!-- Start mini-footer -->
+      <app-footer></app-footer>
+        <!-- End mini-footer -->
+    </div>
+    <!-- colorPanel -->

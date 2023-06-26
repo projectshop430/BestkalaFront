@@ -1,0 +1,61 @@
+<div class="wrapper">
+        <!-- Start header -->
+   <app-header></app-header>
+        <!-- End header -->
+        <!-- Start main-content -->
+
+        <main class="main-content dt-sl mb-3">
+            <div class="container main-container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="dt sl dt-sn dt-sn--box border pt-3 pb-5">
+                            <div class="cart-page cart-empty">
+                                <div class="circle-box-icon">
+                                    <i class="mdi mdi-cart-remove"></i>
+                                </div>
+                                <p class="cart-empty-title">{{title}}</p>
+                                <p>{{description}}</p>
+                                <div class="cart-empty-links mb-5" >
+                                    <a href="#" class="border-bottom-dt">{{namemenue1}}</a>
+                                    <a href="#" class="border-bottom-dt">{{namemenue2}}</a>
+                                    <a href="#" class="border-bottom-dt">{{namemenue3}}</a>
+                                </div>
+                                <a href="#" class="btn-primary-cm">{{descriptionbottom}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Start Banner -->
+                <div class="row mt-3 mt-5 mb-4">
+                    <div class="col-sm-3 col-6 mb-2"*ngFor="let itembanner of listbanner">
+                        <div class="widget-banner" >
+                            <app-startbanner [items]="itembanner"></app-startbanner>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- End Banner -->
+                <!-- Start Product-Slider -->
+
+
+                        <!-- Start Product-Slider -->
+                      <app-bestselling [listbestsellingdata]="likecartempty" [TextHeader]="titlelikecartempty"></app-bestselling>
+                        <!-- End Product-Slider -->
+                <!-- End Product-Slider -->
+                <!-- Start Product-Slider -->
+              <app-bestselling [listbestsellingdata]="offercartempty" [TextHeader]="titleoffercartempty"></app-bestselling>
+                <!-- End Product-Slider -->
+            </div>
+        </main>
+        <!-- End main-content -->
+        <!-- Start footer -->
+       <app-footer></app-footer>
+        <!-- End footer -->
+    </div>
+    <!-- colorPanel -->
+
+
+
+
+

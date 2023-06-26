@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary main-menuTop">
+    <div class="container-fluid ">
+     
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+         
+        </ul>
+
+        <div *ngIf="this.accountService.islogin$" class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              خوش آمدید
+            </a>
+          
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">ویرایش پروفایل</a></li>
+              <li><a class="dropdown-item" href="#">خروج</a></li>
+            </ul>
+          </div>
+
+        <form *ngIf="islogin==false" #logingForm="ngForm" class="d-flex" (ngSubmit)="loging()" role="login">
+          <input name="Email" [(ngModel)]="model.Email" class="form-control me-2" 
+          type="text" 
+          placeholder="Email" 
+          aria-label="Login">
+          <input name="password" [(ngModel)]="model.password"
+           class="form-control me-2" type="Password"
+            placeholder="Password" aria-label="Password">
+          <button class="btn  " style="color: aliceblue;" type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </nav>

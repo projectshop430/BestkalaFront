@@ -1,0 +1,20 @@
+.main-menuTop{
+  margin: 0;
+  padding: 0;
+  background-color: #f92b52;
+}
+.main-menuTop li{
+  display: inline;
+}
+.main-menuTop li a {
+  display: inline-block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #fff;
+}
+.main-menuTop li a:hover{
+  background-color: #f92b52;
+}
+.active-menuTop{
+  background-color: #f92b52;
+}
