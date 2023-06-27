@@ -48,6 +48,7 @@ export class LogingoogleComponent {
       };
     }
 
+    
     async handleCredentialResponse(response: CredentialResponse) {
       await this.service.LoginWithGoogle(response.credential).subscribe(
         (x:any) => {

@@ -30,6 +30,12 @@ export class AuthService {
     return this.httpClient.post(this.path + "LoginWithFacebook", JSON.stringify(credentials), { headers: header, withCredentials: true });
   }
 
+
+  register(credentials: string): Observable<any> {
+    const header = new HttpHeaders().set('Content-type', 'application/json');
+    return this.httpClient.post(this.path + "api/google/Register", JSON.stringify(credentials), { headers: header, withCredentials: true });
+  }
+
   login(loginModel:any): Observable<any> {
     const header = new HttpHeaders().set('Content-type', 'application/json');
 
