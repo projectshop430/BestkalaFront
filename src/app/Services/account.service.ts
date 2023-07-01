@@ -50,6 +50,7 @@ export class AccountService {
         localStorage.setItem('useregister',JSON.stringify(x.data));
         this.currentUserSource.next(x.data);
         this.toater.success(x.message);
+        
       }
       if (x.isSuccess==false)
       this.toater.error(x.message);

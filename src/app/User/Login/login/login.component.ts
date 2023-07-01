@@ -1,49 +1,47 @@
-import { Component ,OnInit} from '@angular/core';
-import {FormGroup , FormControl , FormBuilder , Validators, FormArray} from '@angular/forms';
-
+import { Component, OnInit } from '@angular/core';
+import { AccountService } from 'src/app/Services/account.service';
+import { Observable } from 'rxjs';
+import { userDTOs } from 'src/app/DTOs/userDTOs';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  customerForm! : FormGroup;
+  model :any={};
+  islogin=false;
 
-
-  constructor(private fb : FormBuilder){}
-
-  initAddressForm() : FormGroup{
-    return this.fb.group({
-      type:[''],
-      address:['']
-    })
-  }
-
+  constructor(public accountService:AccountService, private router:Router) {}
 
   ngOnInit(): void {
-    this.customerForm = this.fb.group({
-      FeildEmail : ['',Validators.required],
-      Feildpassword : ['',[Validators.required,Validators.minLength(8),Validators.maxLength(20)]],
-      addressList : this.fb.array([this.initAddressForm])
-    })
-  }
-  get accountInfoForm(){
-    return this.customerForm.get('accountInfoForm');
-  }
-  get addressList(){
-    return this.customerForm.get('addressList') as FormArray;
+  
   }
 
-  addNewAddress(event:any){
-    event.preventDefault();
-    this.addressList.push(this.initAddressForm());
-  }
-  removeAddress(index:any){
-    this.addressList.removeAt(index)
+  loging(){
+   
+    this.accountService.login(this.model).subscribe(data=>{
+    
+      console.log(data);
+      console.log(this.accountService.islogin$)
+      if (this.accountService.islogin$)
+      {
+       
+      this.islogin=true;
+      }
+    },error=>{
+     
+      console.log(error)
+    }
+    );
+    
+    
   }
 
-
-  save(){
-    console.log(this.customerForm.value);
+  logout(){
+    this.accountService.logout();
+    this.islogin=false;
+    this.router.navigateByUrl('/');
+    
   }
 }

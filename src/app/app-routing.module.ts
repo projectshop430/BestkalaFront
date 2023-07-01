@@ -12,16 +12,15 @@ import { VerifyphonenumberComponent } from './User/verifyphonenumber/verifyphone
 import { ShopcompleteComponent } from './shop/shopcomplete/shopcomplete.component';
 import { ShopsingleproductComponent } from './shop/shopsingleproduct/shopsingleproduct.component';
 import { ShopsingleproductinfomationComponent } from './shop/shopsingleproductinfomation/shopsingleproductinfomation.component';
-import { ShopsingleproductQusComponent } from './shop/shopcomplete/shopsingleproduct-qus/shopsingleproduct-qus.component';
 import { ShopporseshComponent } from './shop/shopporsesh/shopporsesh.component';
 
 import { AppComponent } from './app.component';
-import { MemberListComponent } from './members/member-list/member-list.component';
-import { MemberDetailComponent } from './members/member-detail/member-detail.component';
+
+
 import { ListsComponent } from './lists/lists.component';
-import { MessageComponent } from './message/message.component';
+
 import { ProductinsertComponent } from './User/productinsert/productinsert.component';
-import { LogingoogleComponent } from './google/logingoogle/logingoogle.component';
+
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -58,12 +57,9 @@ const routes: Routes = [
   },
 
   {path:'Registers',component:RegisterComponent},
-  {path:'Members',component:MemberListComponent},
-  {path:'Members/id',component:MemberDetailComponent},
-  {path:'Lists',component:ListsComponent},
-  {path:'Messages',component:MessageComponent},
 
-  {path:'logingoogle',component:LogingoogleComponent},
+  {path:'Lists',component:ListsComponent},
+
 
   {path:'**',component:Page404Component}
 

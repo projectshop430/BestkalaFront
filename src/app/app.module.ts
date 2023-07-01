@@ -53,16 +53,13 @@ import { RouterModule } from '@angular/router';
 import {FormsModule} from '@angular/forms'
 
 
-import { NavComponent } from './nav/nav.component';
+
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 
-import { MemberListComponent } from './members/member-list/member-list.component';
-import { MemberDetailComponent } from './members/member-detail/member-detail.component';
+
 import { ListsComponent } from './lists/lists.component';
-import { MessageComponent } from './message/message.component';
+
 import { ProductinsertComponent } from './User/productinsert/productinsert.component';
-import { MaterialModule } from './Matrial/material.module';
-import { LogingoogleComponent } from './google/logingoogle/logingoogle.component';
 
 
 
@@ -109,15 +106,14 @@ import { LogingoogleComponent } from './google/logingoogle/logingoogle.component
       ShopsingleproductinfomationComponent,
       ShopporseshComponent,
 
-    NavComponent,
+ 
  
     RegisterComponent,
-    MemberListComponent,
-    MemberDetailComponent,
+ 
     ListsComponent,
-    MessageComponent,
+
     ProductinsertComponent,
-    LogingoogleComponent,
+ 
    
    
 
@@ -131,7 +127,7 @@ import { LogingoogleComponent } from './google/logingoogle/logingoogle.component
     BrowserAnimationsModule,
     NgxUiLoaderModule,
     HttpClientModule,
-    MaterialModule,
+    RouterModule,
       FormsModule,
      ToastrModule.forRoot({
      positionClass:'toast-bottom-right'
