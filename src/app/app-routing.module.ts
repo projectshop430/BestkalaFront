@@ -9,18 +9,18 @@ import { PasswordchangeComponent } from './User/PasswordsChenge/passwordchange/p
 import { RegisterComponent } from './User/Reigister/register/register.component';
 import { CartemptyComponent } from './User/cartempty/cartempty/cartempty.component';
 import { VerifyphonenumberComponent } from './User/verifyphonenumber/verifyphonenumber/verifyphonenumber.component';
-import { ShopcompleteComponent } from './shop/shopcomplete/shopcomplete.component';
-import { ShopsingleproductComponent } from './shop/shopsingleproduct/shopsingleproduct.component';
-import { ShopsingleproductinfomationComponent } from './shop/shopsingleproductinfomation/shopsingleproductinfomation.component';
-import { ShopporseshComponent } from './shop/shopporsesh/shopporsesh.component';
+import { ShopcompleteComponent } from './User/shop/shopcomplete/shopcomplete.component';
+import { ShopsingleproductComponent } from './User/shop/shopsingleproduct/shopsingleproduct.component';
+import { ShopsingleproductinfomationComponent } from './User/shop/shopsingleproductinfomation/shopsingleproductinfomation.component';
+import { ShopporseshComponent } from './User/shop/shopporsesh/shopporsesh.component';
 
 import { AppComponent } from './app.component';
 
 
-import { ListsComponent } from './lists/lists.component';
+import { ListsComponent } from './Admin/lists/lists.component';
 
 import { ProductinsertComponent } from './User/productinsert/productinsert.component';
-import { RoleComponent } from './role/role.component';
+import { RoleComponent } from './Admin/role/role.component';
 
 
 const routes: Routes = [

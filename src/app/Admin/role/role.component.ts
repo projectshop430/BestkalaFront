@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { RoleSystemService } from '../Services/role-system.service';
+import { RoleSystemService } from 'src/app/Services/role-system.service';
 
 @Component({
   selector: 'app-role',
