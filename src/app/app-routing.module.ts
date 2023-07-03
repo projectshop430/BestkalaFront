@@ -20,6 +20,7 @@ import { AppComponent } from './app.component';
 import { ListsComponent } from './lists/lists.component';
 
 import { ProductinsertComponent } from './User/productinsert/productinsert.component';
+import { RoleComponent } from './role/role.component';
 
 
 const routes: Routes = [
@@ -60,7 +61,7 @@ const routes: Routes = [
 
   {path:'Lists',component:ListsComponent},
 
-
+  {path:'role',component:RoleComponent},
   {path:'**',component:Page404Component}
 
 ];

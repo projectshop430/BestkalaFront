@@ -60,6 +60,8 @@ import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 import { ListsComponent } from './lists/lists.component';
 
 import { ProductinsertComponent } from './User/productinsert/productinsert.component';
+import { RoleComponent } from './role/role.component';
+import { AddRoleComponent } from './role/add-role/add-role.component';
 
 
 
@@ -113,6 +115,8 @@ import { ProductinsertComponent } from './User/productinsert/productinsert.compo
     ListsComponent,
 
     ProductinsertComponent,
+      RoleComponent,
+      AddRoleComponent,
  
    
    
