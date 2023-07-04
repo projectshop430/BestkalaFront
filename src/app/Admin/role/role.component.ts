@@ -11,15 +11,15 @@ export class RoleComponent implements OnInit{
   role:any;
 
   ngOnInit(): void {
-    this.listrol();
+    this.showrole();
   }
   baseurl:string="https://localhost:7097/api/Role";
   constructor(private http:HttpClient,private rolasystem:RoleSystemService){}
-  listrol()
+  showrole()
   {
     this.http.get(this.baseurl).subscribe(data=>{
-      this.role=data;
+       this.role=data;
     })
-  }  
+  }
 
 }

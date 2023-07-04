@@ -8,6 +8,8 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class RoleSystemService {
  baseUrl:string="https://localhost:7097/api/accountrole/RegisterRoles"
+ baseurlshow:string="https://localhost:7097/api/Role";
+ role:any;
   constructor(private http:HttpClient,private toaster:ToastrService) { }
 
   registerRole(model:any)
@@ -22,5 +24,7 @@ return this.http.post(this.baseUrl,model).pipe(map((x1:any)=>{
   }
 }))
   }
+
+  
 }
 

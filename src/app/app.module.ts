@@ -61,6 +61,7 @@ import { ListsComponent } from './Admin/lists/lists.component';
 
 import { ProductinsertComponent } from './User/productinsert/productinsert.component';
 import { RoleComponent } from './Admin/role/role.component';
+import { AddRoleComponent } from './Admin/role/add-role/add-role.component';
 
 
 
@@ -116,6 +117,7 @@ import { RoleComponent } from './Admin/role/role.component';
 
     ProductinsertComponent,
       RoleComponent,
+      AddRoleComponent,
 
  
    

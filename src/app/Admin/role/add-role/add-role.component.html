@@ -1,0 +1,41 @@
+<form class="row g-3 needs-validation" novalidate #Roleregiter="ngForm" (ngSubmit)="save()">
+    <div class="col-md-4 pr-5">
+        <label for="validationCustom04" class="form-label">نام رول</label>
+        <select class="form-select" id="validationCustom04" [(ngModel)]="model.namerole" name="namerole" style="text-align: left;" required>
+          <option selected  value="admin" >admin</option>
+          <option value="Progremer">Programer</option>
+          <option value="user">user</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select a valid state.
+        </div>
+      </div>
+   
+  
+
+      <div class="col-md-4 pr-5">
+        <label for="validationCustom04" class="form-label">منبع</label>
+        <select class="form-select"  [(ngModel)]="model.source" name="source"  id="validationCustom04" style="text-align: left;" required>
+          <option selected  value="admin" >List1</option>
+          <option value="Progremer">Pageindex</option>
+          
+        </select>
+        <div class="invalid-feedback">
+          Please select a valid state.
+        </div>
+      </div>
+ 
+    <div class="col-md-4 mt-5 ">
+        <input class="form-check-input" [(ngModel)]="model.isShow" name="isShow"  type="checkbox" value="" id="invalidCheck" required>
+        <label class="form-check-label  pr-3" for="invalidCheck">
+        نمایش
+        </label>
+        <div class="invalid-feedback">
+          You must agree before submitting.
+       
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+  </form>
